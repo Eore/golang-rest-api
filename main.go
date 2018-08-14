@@ -1,11 +1,15 @@
 package main
 
-import _ "./repository"
+import (
+	"./delivery/rest"
+	"./pkg"
+	_ "./repository"
+)
 
 func main() {
 	// fmt.Println(pkg.InitTable(pkg.ReadStructTags(model.Pasien{})))
-	// pkg.Router(rest.Pasien)
-	// pkg.StartServer()
+	pkg.Router(rest.Pasien)
+	pkg.StartServer()
 	// newPasien := models.Pasien{
 	// 	NomorPengenal:      "111",
 	// 	JenisNomorPengenal: "KTP",

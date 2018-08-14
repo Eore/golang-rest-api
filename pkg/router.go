@@ -13,6 +13,6 @@ type API struct {
 
 func Router(apiRoute []API) {
 	for _, val := range apiRoute {
-		http.HandleFunc(val.URL, val.Controller)
+		http.HandleFunc("/api/v1"+val.URL, val.Controller)
 	}
 }

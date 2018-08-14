@@ -1,13 +1,13 @@
 package rest
 
 import (
+	c "../../controller/pasien"
 	"../../pkg"
-	c "../../usecase/pasien"
 )
 
 var Pasien = []pkg.API{
 	pkg.API{
-		Method:     "GET",
+		Method:     "POST",
 		URL:        "/pasien",
 		Controller: c.TambahPasien,
 		Privillage: []string{"admin"},
